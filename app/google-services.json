@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "638466820118",
+    "project_id": "animapedia-ba3a5",
+    "storage_bucket": "animapedia-ba3a5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638466820118:android:1dea365754712e99b20d37",
+        "android_client_info": {
+          "package_name": "com.example.animapedia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGuy-fWGahzDFr_p3mwPvyiuJVlVqFrhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

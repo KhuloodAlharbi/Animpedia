@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:orientation="horizontal"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="8dp">
+
+    <!-- User Message Bubble -->
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_chat_bubble_user"
+        android:maxWidth="260dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:text="This is a message from the user."
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

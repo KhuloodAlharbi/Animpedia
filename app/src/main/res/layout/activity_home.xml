@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F6F9"> <!-- Very light grey-blue background for contrast -->
+
+    <!-- ================= SCROLLABLE CONTENT AREA ================= -->
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+            <!-- CREATIVE HEADER: Curved Bottom Design -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/headerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginBottom="-30dp"
+                app:cardBackgroundColor="#172373"
+
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Title -->
+                    <TextView
+                        android:id="@+id/homeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="60dp"
+                        android:text="Animapedia"
+                        android:textColor="@android:color/white"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Subtitle -->
+                    <TextView
+                        android:id="@+id/subTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:alpha="0.8"
+                        android:text="Explore the animal kingdom"
+                        android:textColor="#E0E0E0"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@id/homeTitle"
+                        app:layout_constraintTop_toBottomOf="@id/homeTitle" />
+
+                    <!-- Decorative Circle (Creative Touch) -->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ================= CATEGORIES SECTION ================= -->
+            <TextView
+                android:id="@+id/catTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:text="Categories"
+                android:textColor="#333333"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headerContainer" />
+
+            <GridLayout
+                android:id="@+id/gridCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:columnCount="2"
+                android:rowCount="4"
+                app:layout_constraintTop_toBottomOf="@id/catTitle">
+
+                <!-- Row 1 -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMammals"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="7dp"
+                    android:text="Mammals  "
+                    android:textColor="#081571"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/mamals1"
+                    app:iconTint="@null"
+                    app:iconSize="55dp"
+                    app:iconGravity="textStart"
+                    app:strokeColor="#081571"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBirds"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    android:text="Birds       "
+                    android:textColor="#081571"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/birds1"
+                    app:iconTint="@null"
+                    app:iconSize="60dp"
+                    app:iconGravity="textStart"
+                    app:strokeColor="#081571"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"/>
+
+                <!-- Row 2 -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReptiles"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    android:text="Reptiles    "
+                    android:textColor="#081571"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/reptiles1"
+                    app:iconTint="@null"
+                    app:iconSize="60dp"
+                    app:iconGravity="textStart"
+                    app:strokeColor="#081571"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFish"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    android:text="Fish       "
+                    android:textColor="#081571"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/fish1"
+                    app:iconTint="@null"
+                    app:iconSize="60dp"
+                    app:iconTintMode="multiply"
+                    app:iconGravity="textStart"
+                    app:strokeColor="#081571"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"/>
+
+
+
+
+                <!-- Row 3 -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAmphibians"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    android:text="Amphibians"
+                    android:textColor="#081571"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/frog"
+                    app:iconTint="@null"
+                    app:iconSize="40dp"
+                    app:iconGravity="textStart"
+                    app:strokeColor="#081571"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInsects"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    android:text="Insects"
+                    android:textColor="#081571"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/aunt"
+                    app:iconTint="@null"
+                    app:iconSize="50dp"
+                    app:iconGravity="textStart"
+                    app:strokeColor="#081571"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"/>
+
+                <!-- Row 4 -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInvertebrates"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:layout_columnSpan="2"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="6dp"
+                    android:text="Invertebrates"
+                    android:textColor="#081571"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/invertebrates1"
+                    app:iconTint="@null"
+                    app:iconSize="60dp"
+                    app:iconGravity="textStart"
+                    app:strokeColor="#081571"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="2dp"/>
+
+            </GridLayout>
+
+            <!-- ================= AI CHATBOT CARD ================= -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardChatbot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/accent_blue"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:layout_constraintTop_toBottomOf="@id/gridCategories">
+
+                <!-- Added a subtle gradient/image overlay effect placeholder -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:id="@+id/chatTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ask Animapedia AI"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chatTitle"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="17dp"
+                        android:text="Identify animals &amp; learn facts instantly!"
+                        android:textColor="#E0E0E0"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnChatbot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="1dp"
+
+                        android:backgroundTint="#FFFFFF"
+                        android:text="Chat"
+                        android:textColor="@color/accent_blue"
+                        android:textStyle="bold"
+                        app:cornerRadius="20dp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ================= STORE CARD ================= -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardChatbot">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="#F5F5F5">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cart" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Merch Store"
+                            android:textColor="#333"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Get stickers &amp; toys"
+                            android:textColor="#757575"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_favorite_red"
+                        app:tint="#081571"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <!-- ================= FIXED BOTTOM NAVIGATION BAR ================= -->
+    <!-- This is now OUTSIDE the ScrollView so it sticks to the bottom! -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardElevation="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <!-- Home -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/navHome"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/home"
+                    android:fillColor="@android:color/transparent"
+
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="10sp"
+                    android:textColor="#081571"/>
+            </LinearLayout>
+
+            <!-- Store -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/navStore"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/store"
+                    android:fillColor="@android:color/transparent"
+                    app:iconSize="66dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Store"
+                    android:textSize="10sp"
+                    android:textColor="#9E9E9E"/>
+            </LinearLayout>
+
+            <!-- Chatbot (Prominent Center Button) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardCornerRadius="28dp"
+                    app:cardBackgroundColor="@color/accent_blue"
+                    app:cardElevation="6dp">
+                    <ImageButton
+                        android:id="@+id/navChat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/chatbot"
+                        android:padding="20dp"
+                        app:tint="#FFFFFF" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Favorites -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/navFav"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_favorite_red"
+                    app:tint="#848484" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favs"
+                    android:textSize="10sp"
+                    android:textColor="#9E9E9E"/>
+            </LinearLayout>
+
+            <!-- Cart -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/navCart"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/cart"
+                    android:scaleType="fitCenter"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cart"
+                    android:textSize="10sp"
+                    android:textColor="#9E9E9E"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
