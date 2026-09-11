@@ -35,7 +35,7 @@ Built with Android Studio (Java). Firebase handles user accounts, favorites, and
 
 **Merch Store & Checkout** — browse animal-themed products, add to cart, and check out
 
-<img src="./merch-store.png" width="250"> <img src="./checkout.png" width="250">
+<img src="./merch-store.png" width="250"> <img src="./MP Project-3.png" width="250">
 
 **Favorites** — revisit saved animals anytime
 
