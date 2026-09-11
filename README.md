@@ -19,27 +19,27 @@ Built with Android Studio (Java). Firebase handles user accounts, favorites, and
 
 **Login / Register** — sign in or create an account, then land on the Home Screen
 
-<img src="./animapedia-assets/login.png" width="250"> <img src="./animapedia-assets/register.png" width="250">
+<img src="./login.png" width="250"> <img src="./register.png" width="250">
 
 **Home Screen** — jump into categories, the AI chatbot, or the merch store
 
-<img src="./animapedia-assets/home.png" width="250">
+<img src="./home.png" width="250">
 
 **Category & Animal Details** — browse or search animals within a category, tap one to see its details, and add it to favorites
 
-<img src="./animapedia-assets/category.png" width="250"> <img src="./animapedia-assets/animal-details.png" width="250">
+<img src="./category.png" width="250"> <img src="./animal-details.png" width="250">
 
 **AI(RAG) Chatbot** — ask animal-related questions and get conversational answers
 
-<img src="./animapedia-assets/chatbot.png" width="250">
+<img src="./chatbot.png" width="250">
 
 **Merch Store & Checkout** — browse animal-themed products, add to cart, and check out
 
-<img src="./animapedia-assets/merch-store.png" width="250"> <img src="./animapedia-assets/checkout.png" width="250">
+<img src="./merch-store.png" width="250"> <img src="./checkout.png" width="250">
 
 **Favorites** — revisit saved animals anytime
 
-<img src="./animapedia-assets/favorites.png" width="250">
+<img src="./favorites.png" width="250">
 
 ## Future improvements
 
