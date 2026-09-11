@@ -39,7 +39,6 @@ Built with Android Studio (Java). Firebase handles user accounts, favorites, and
 
 **Favorites** — revisit saved animals anytime
 
-<img src="./favorites.png" width="250">
 
 ## Future improvements
 
