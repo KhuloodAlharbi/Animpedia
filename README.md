@@ -27,7 +27,7 @@ Built with Android Studio (Java). Firebase handles user accounts, favorites, and
 
 **Category & Animal Details** — browse or search animals within a category, tap one to see its details, and add it to favorites
 
-<img src="./category.png" width="250"> <img src="./animal-details.png" width="250">
+<img src="./category.png" width="250"> <img src="./MP Project-2.png" width="250">
 
 **AI(RAG) Chatbot** — ask animal-related questions and get conversational answers
 
