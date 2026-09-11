@@ -19,7 +19,7 @@ Built with Android Studio (Java). Firebase handles user accounts, favorites, and
 
 **Login / Register** — sign in or create an account, then land on the Home Screen
 
-<img src="./login.png" width="250"> <img src="./register.png" width="250">
+<img src="./MP Project.png" width="250"> 
 
 **Home Screen** — jump into categories, the AI chatbot, or the merch store
 
